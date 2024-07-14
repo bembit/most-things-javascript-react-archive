@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="middle">
+        <div class="title">
+            <h1>API<strong>test</strong></h1>
+        </div>
+        
+    <% photo.forEach(function(photo){ %>
+
+    <div class="form">
+            <div class="row-spacing">
+               <h4><%= photo.name %></h4>
+            </div>
+            <div class="row-spacing">
+                <h4><%= photo._id %></h4>
+             </div>
+            <div class="row-spacing">
+                <p><%= photo.image %></p>
+            </div>
+            <div class="row-spacing">
+               <img class="test-image" src="<%= photo.image %>" alt="<%= photo.name %>"></img>
+            </div>
+            <div class="">
+               <p>Tags --> <%= photo.tag %></p>
+            </div>
+    <hr class="test-divider">
+
+    <% }); %>  
+    
+    </div> 
+</div>
+
+<% include ../partials/footer %>

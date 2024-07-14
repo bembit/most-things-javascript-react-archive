@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+
+<div class="middle">
+    <div class="title">
+        <h1>hello<strong>there</strong></h1>
+    </div>
+    <div class="form">
+        <form action="/login" method="POST">
+            <div class="row-spacing">
+                <input type="text" name="username" placeholder="username">
+            </div>
+            <div class="row-spacing">
+                <input type="password" name="password" placeholder="password">
+            </div>
+            <div class="col-spacing">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer %>

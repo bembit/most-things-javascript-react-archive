@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+    <div class="middle">
+        <div class="title">
+            <h1>Photo<strong>API</strong></h1>
+        </div>
+        <div class="form">
+            <form action="/api/photos/" method="POST" enctype="multipart/form-data">
+                <div class="row-spacing">
+                    <label for="name"></label>
+                    <input type="text" name="name" id="name" placeholder="Image Name" required> 
+                </div>
+                <div class="row-spacing">
+                    <label for="tag"></label>
+                    <input type="text" name="tag" id="tag" placeholder="Image Tag(s)" required>
+                </div>
+                <div class="col-spacing">
+                    <input class="inputfile" type="file" name="image" id="image" accept="image/*" onchange="loadFile(event)" required>
+                    <label for="image">Select Image <i class="fa fa-images"></i></label>
+
+                    <input class="" type="submit" value="Submit">
+                </div>          
+            </form>
+        </div>            
+        <div class="preview">
+            <img class="image-preview" id="output"/>
+        </div>                                  
+    </div>
+    
+<% include ../partials/footer %>
